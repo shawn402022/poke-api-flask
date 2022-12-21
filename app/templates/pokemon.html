@@ -1,0 +1,33 @@
+{% extends './layout.html' %}
+
+{% block title %}  library {% endblock title %}
+
+{% block content %}
+<h1>Pokemon Library</h1>
+<!-- <form action="">
+    <div class="mb-3">
+        <label for="inputPname" class="form-label">Name</label>
+        <input type="text" class="form-control" id="inputPname" >   
+    </div>
+    <div class="mb-3">
+        <label for="inputDescription" class="form-label">Description</label>
+        <input type="text" class="form-control" id="inputDescription">
+    </div>
+    <div class="mb-3">
+        <label for="inputType" class="form-label">Type</label>
+        <input type="text" class="form-control" id="inputType">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form> -->
+{% for pokemon in pokemon %}
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title"><a href = "{{ url_for('main2.post_poke_id', id =pokemon.id) }}">{{ pokemon.name }}</a></h5>
+            {{ pokemon.description }}
+        </div>
+        <div class="card-footer">
+            {{ pokemon.name }} is not available because it belongs to {{ pokemon.user.name }}
+        </div>
+    </div>
+{% endfor %}
+{% endblock content %}

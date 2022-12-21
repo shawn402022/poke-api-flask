@@ -1,0 +1,12 @@
+{% extends './layout.html' %}
+
+{% block title %} {{pokemon.name}} {% endblock title %}
+
+{% block content %}
+<h1>{{ pokemon.name }}</h1>
+<P>{{ pokemon.description }}</P>
+<div class="card-footer">
+    {{ pokemon.name }} is not available because it belongs to {{ pokemon.user.name }}
+</div>
+
+{% endblock content %}

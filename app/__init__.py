@@ -14,5 +14,13 @@ app.config.from_object(Config)
 db.init_app(app)
 migrate.init_app(app,db)
 
-from app import routes, models
+# from app import routes, models
+from app.blueprints.main import bp as main_bp
+app.register_blueprint(main_bp)
+
+from app.blueprints.main2 import bp as main2_bp
+app.register_blueprint(main2_bp)
+
+
+
 
