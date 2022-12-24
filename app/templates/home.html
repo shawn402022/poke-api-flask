@@ -5,4 +5,30 @@
 {% block content %}
 
 
+<html class="masternav">
+<head>
+    <style class="bimg2">
+        body
+        {
+        background-repeat: no-repeat;    
+        background-attached: fixed;    
+        background-size:cover;    
+        background-image:url({{ url_for ('static',filename = 'images/pgroup4-2.jpg' ) }})   
+        }
+    </style>
+</head>
+</html>
+
+{% if user.is_authenticated %}
+<div class="welcomeparent">
+    <div >
+        <h4 class="welcome">Welcome to the Pokemon app {{user.username}}</h4>
+    </div>
+</div>
+{% else %}
+    <p>Please <a href="{{ url_for('auth.login') }}"> Login</a></p>
+{% endif %}
+
+
+
 {% endblock content %}

@@ -1,7 +1,40 @@
 {% extends './layout.html' %}
 
+
 {% block title %} About {% endblock title %}
 
+
+
+
 {% block content %}
-<h1>about</h1>
+<html class="masternav">
+<head>
+    <style class="bimg2">
+        body
+        {
+        background-repeat: no-repeat;    
+        background-attached: fixed;    
+        background-size: cover;    
+        background-image:url({{ url_for ('static',filename = 'images/pgroup3.jpg' ) }} )   
+        }
+    </style>
+</head>
+<body class="bigback">
+    <div class="text-container">
+      <p div class="text-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate provident consectetur illo suscipit perferendis odit eos porro nostrum in vel vitae incidunt, doloremque asperiores hic numquam quam. Quo distinctio officiis eos quaerat quasi quas sequi pariatur nihil consequuntur rem. Dignissimos expedita in neque illum aperiam officia, alias sit eligendi delectus.
+        Debitis rerum assumenda odit cupiditate, numquam deleniti tempora nobis asperiores quod nesciunt fuga repellendus reprehenderit possimus autem voluptates accusamus labore. Porro, nobis! Voluptatem reiciendis eveniet iste, omnis assumenda est soluta nostrum ullam quia corrupti? Nesciunt, cumque? Adipisci quam quo, voluptate reiciendis soluta deserunt, unde delectus vitae fugiat doloremque nisi tenetur?
+        Quibusdam earum distinctio maxime quia sint odio quaerat. Accusamus explicabo doloremque omnis magni error inventore ut alias blanditiis ullam quos. Debitis reiciendis recusandae minus. Recusandae ipsum vitae repudiandae veniam quam, quisquam vel itaque fugit minus. Ratione, vero dicta expedita totam deserunt hic quidem commodi, dolor rem labore explicabo asperiores impedit.
+        Odit alias placeat facere molestias quidem modi id, beatae adipisci aperiam aut. Doloremque voluptate, veniam dolorum architecto magni et maxime qui, cupiditate facilis quasi ad quod, dignissimos vitae perferendis quibusdam ratione impedit sapiente modi voluptatem voluptatibus non sunt. Corrupti mollitia quos magni fugit corporis officia voluptate illum eum amet aliquid?</p>  
+    </div>
+</body>
+</html>
+<div id="parent">
+    <div class="text1"><h1 class="about" >about</h1></div>
+    <!-- <div class="image1" >
+        <div ><img class="logo1" src="{{ url_for ('static',filename = 'images/pgroup3.jpg') }}"></div>
+    </div> -->
+    
+
+</div>
+
 {% endblock content %}

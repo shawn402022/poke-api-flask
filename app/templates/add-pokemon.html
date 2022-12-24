@@ -4,7 +4,7 @@
 
 {% block content %}
 <h1>Add Pokemon</h1>
-<form action="{{ url_for ('main2.create_poke') }}" method="POST">
+<form class="container3" action="{{ url_for ('main2.create_poke') }}" method="POST">
     <div class="mb-3">
         <label for="inputPname" class="form-label">Name</label>
         <input type="text" class="form-control" id="inputPname" name= "inputPname" >   

@@ -1,5 +1,154 @@
-/* .navbar-collapse {
-    display: flex;
-    justify-content: center;
+#parent{position:relative}
+.text1{
+    position:absolute;
+    top: 30px;
+}
 
-} */
+/* navbar */
+.container {
+    
+    display: flex;
+    background:rgba(0,0,0,);
+    justify-content: space-between;
+
+ 
+    
+    
+}
+
+
+.container_fluid{
+
+}
+
+.item{
+   
+    display: flex;
+    justify-content: space-evenly;
+    align-items:stretch;
+    
+    
+   
+
+    
+    padding-right: 0px;
+    
+}
+
+.container2{
+    display:flex;
+    flex-direction: row;
+
+
+}
+
+
+.navbar-brand{
+    background:rgba(0,0,0,)
+
+}
+
+.masternav3{
+    z-index:1;
+    height: 5px;
+
+}
+
+.text-container{
+    border-style: solid;
+    
+    
+    
+    border-radius: 25px;
+    text-shadow: black;
+    background-color: grey;
+    background:rgba(0,0,0,0.3);
+    border-color: black;
+    border-width: 12px;
+    
+
+}
+
+.welcome{
+    
+    
+    
+
+
+   
+
+
+    
+    
+ 
+    
+    
+}
+
+.welcomeparent{
+    background-color: white;
+    padding-left: 20px;
+    padding-right:20px;
+    margin-left:200px;
+    margin-top:50px;
+    
+    border-style: groove;
+    border-color: black;
+    border-radius: 10px;    
+    
+   
+
+
+    
+}
+
+.pokeball1{
+    position:absolute;
+    margin: left -20px;
+    padding:left -20px;
+    z-index: -1 ;
+    border-color: white;
+    align-items:  flex-start
+}
+
+.pokegraphics{
+    position: absolute;
+    margin-left:430px;
+    margin-top:225px;
+    
+}
+
+
+
+.spinner{
+
+    animation:mySpinner 2s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes mySpinner{
+    from{ background:rgba(0,0,0,0);
+        border-radius: 0px; 
+    }
+    25%{
+
+    }
+    to{ background:rgba(0,0,0,0.6);
+        border-radius: 10px;
+
+    }
+}
+
+.nav-text{
+    position:absolute;
+    text-shadow: black;
+    text
+
+
+}
+
+.tbox{
+    text-shadow: 1px 1px #FF1000;
+}
+
+

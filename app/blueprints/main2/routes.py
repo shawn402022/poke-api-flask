@@ -1,7 +1,8 @@
 from . import bp as app
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for, flash
 from app import db
 from .models import Pokemon
+from flask_login import current_user
 
 @app.route('/pokemon')
 def pokemon():
@@ -23,8 +24,10 @@ def create_poke():
     name = request.form['inputPname']
     description = request.form['inputDescription']
     type = request.form['inputType']
-    new_pokemon = Pokemon(name=name, description=description, type= type, owner_id=1)
+    new_pokemon = Pokemon(name=name, description=description, type= type, owner_id=current_user.id)
     db.session.add(new_pokemon)
     db.session.commit()
-    print(f'{name} has been added to the pokemon library.')
+    flash(f'{name} has been added to the your library.', 'success')
     return redirect(url_for('main2.add_poke'))
+
+    # @app.route
